@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Walmart Farmer App</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
+        <link rel="stylesheet" href="css/fullcalendar.css" />
+        <link rel="stylesheet" href="css/matrix-style.css" />
+        <link rel="stylesheet" href="css/select2.css" />
+        <link rel="stylesheet" href="css/matrix-media.css" />
+        <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/jquery.gritter.css" />
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+
+    </head>
+    <body>
+
+        <!--Header-part-->
+        <div id="header">
+            <h5><img class="walmartLogo" src="img/wlogo.svg" alt=""></h5>
+            <!-- <h1><a href="dashboard.html">Matrix Admin</a></h1> -->
+        </div>
+        <!--close-Header-part--> 
+
+
+        <!--top-Header-menu-->
+        <div id="user-nav" class="navbar navbar-inverse">
+            <ul class="nav">
+
+                <li ><a href="#" ><i class="icon icon-envelope"></i> <span class="text">New Notifications</span> <span class="label label-important">5</span> </a>
+                </li>
+                <li  class="dropdown" id="profile-messages" ><a title="" href="#" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"><i class="icon icon-user"></i>  <span class="text">Welcome Hari</span><b class="caret"></b></a>
+                    <ul class="dropdown-menu pull-right">
+                        <li><a href="#"><i class="icon-user"></i> My Profile</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#"><i class="icon-check"></i> Order History</a></li>
+                        <li><a href="#"><i class="icon-check"></i> FAQ</a></li>
+                        <li><a href="#"><i class="icon-check"></i> Change Language</a></li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="icon-key"></i> Log Out</a></li>
+                    </ul>
+                </li>
+                <!--  <li class=""><a title="" href="#"><i class="icon icon-cog"></i> <span class="text">Settings</span></a></li> -->
+            </ul>
+        </div>
+        <!--close-top-Header-menu-->
+        <!--start-top-serch-->
+        <!-- <div id="search">
+          <input type="text" placeholder="Search here..."/>
+          <button type="submit" class="tip-bottom" title="Search"><i class="icon-search icon-white"></i></button>
+        </div> -->
+        <!--close-top-serch-->
+        <!--sidebar-menu-->
+        <div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i> Dashboard</a>
+            <ul>
+                <li class="active"><a href="admin.html"><i class="icon icon-tint"></i> <span>Bids</span>
+
+                <li><a href="adminPosts.html"><i class="icon icon-th-list"></i> <span>All Posts</span></a> </li>
+
+                <!-- <span class="label label-important">5</span> -->
+                </a></li>
+        </div>
+        <!--sidebar-menu-->
+
+        <!--main-container-part-->
+        <div id="content">
+            <!--breadcrumbs-->
+            <div id="content-header">
+                <div id="breadcrumb"> <a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a></div>
+            </div>
+            <br>
+            <!--End-breadcrumbs-->
+            <div class="container-fluid">
+            	<a data-toggle="modal" href="#myAlert" class="pull-right btn btn-danger">Create Bid</a>
+                <div class="row-fluid" style="margin-top: 2%">
+                    <div class="widget-box">
+                        <div class="widget-title">
+                            <ul class="nav nav-tabs">
+                              
+                                <li><a data-toggle="tab" href="#tab2"><i class="icon-time"></i>&nbsp;Published Bids<span class="label label-important">2</span></a></li>
+                                <li><a data-toggle="tab" href="#tab4"><i class="icon-ok"></i>&nbsp;Closed Bids</a></li>
+                            </ul>
+                        </div>
+                        <div class="widget-content tab-content row-fluid">
+                            <!-- <div id="tab1" class="tab-pane active">
+                                <div class="container bids">
+                                    <div class="well well-sm hide">
+                                        <strong>Category Title</strong>
+                                        <div class="btn-group">
+                                            <a href="#" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-list">
+                                                </span>List</a> <a href="#" id="grid" class="btn btn-default btn-sm"><span
+                                                    class="glyphicon glyphicon-th"></span>Grid</a>
+                                        </div>
+                                    </div>
+                                    <div id="products" class=" list-group">
+                                        <div class="item  col-xs-3 col-lg-3">
+                                            <div class="thumbnail">
+                                                <img class="group list-group-image" src="img/onions.jpg" alt="" />
+                                                <div class="caption">
+                                                    <h4 class="group inner list-group-item-heading">
+                                                        Onions</h4>
+                                                    <p class="group inner list-group-item-text">
+                                                        Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                                                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                                    <div class="row-fluid">
+                                                        <div class="pull-left">
+                                                            <p class="lead quantity">
+                                                                <b><small>50kg</small></b></p>
+                                                        </div>
+                                                        <a data-toggle="modal"  <button class="btn pull-right btn-success" >Publish Bid</button></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item  col-xs-3 col-lg-3">
+                                            <div class="thumbnail">
+                                                <img class="group list-group-image" src="img/carrot.jpg" alt="" />
+                                                <div class="caption">
+                                                    <h4 class="group inner list-group-item-heading">
+                                                        Carrot</h4>
+                                                    <p class="group inner list-group-item-text">
+                                                        Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                                                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                                    <div class="row-fluid">
+                                                        <div class="pull-left">
+                                                            <p class="lead quantity">
+                                                                <b><small>50kg</small></b></p>
+                                                        </div>
+                                                        <a data-toggle="modal"  <button class="btn pull-right btn-success" >Publish Bid</button></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  -->      
+                            <div id="tab2" class="tab-pane active"> 
+                                <div class="container bids">
+                                    <div class="well well-sm hide">
+                                        <strong>Category Title</strong>
+                                        <div class="btn-group">
+                                            <a href="#" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-list">
+                                                </span>List</a> <a href="#" id="grid" class="btn btn-default btn-sm"><span
+                                                    class="glyphicon glyphicon-th"></span>Grid</a>
+                                        </div>
+                                    </div>
+                                    <div id="products" class=" list-group">
+                                        <div class="item  col-xs-3 col-lg-3">
+                                            <div class="thumbnail">
+                                                <img class="group list-group-image" src="img/brinjal.jpg" alt="" />
+                                                <div class="caption">
+                                                    <h4 class="group inner list-group-item-heading">
+                                                        Brinjals</h4>
+                                                    <p class="group inner list-group-item-text">
+                                                        Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                                                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                                    <div class="row-fluid">
+                                                        <div class="pull-left col-lg-10">
+                                                            <p class="lead quantity pull-left">
+                                                                <b><small>50kg</small></b></p>
+                                                            <p class="price pull-right" style="color:#468847">Posted on:&nbsp;<span>02/01/2017</span></p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="well span11 pull-right" style="margin-top: 1%;font-size: 13px;color: black;">
+                                            	<div class="widget-content">
+										            <div class="todo">
+										              <ul>
+										                <li class="clearfix">
+										                  <div class="txt">
+										                	&nbsp;&nbsp;<input type="checkbox"> &nbsp;
+										                    Srihari Prasad </div>
+										                  <div class="pull-right span6"> 
+															<span>Quantity : 50kg</span>
+															<span class="pull-right"> Price: 3000&nbsp;&nbsp;</span>
+										                  </div>
+										                </li>
+										                <li class="clearfix">
+										                  <div class="txt">
+										                	&nbsp;&nbsp;<input type="checkbox"> &nbsp;
+										                    Mangesh  </div>
+										                  <div class="pull-right span6"> 
+															<span>Quantity : 50kg</span>
+															<span class="pull-right"> Price: 1000&nbsp;&nbsp;</span>
+										                  </div>
+										                </li>
+										                <li class="clearfix">
+										                  <div class="txt">
+										                	&nbsp;&nbsp;<input type="checkbox"> &nbsp;
+										                    Raghu  </div>
+										                  <div class="pull-right span6"> 
+															<span>Quantity : 100kg</span>
+															<span class="pull-right"> Price: 5000&nbsp;&nbsp;</span>
+										                  </div>
+										                </li>
+										              </ul>
+										            </div>
+										          </div><br>
+										          <button class="pull-right btn btn-success">close bid</button>
+                                            </div>
+                                        </div>
+                                        <div class="item  col-xs-3 col-lg-3">
+                                            <div class="thumbnail">
+                                                <img class="group list-group-image" src="img/potato.jpg" alt="" />
+                                                <div class="caption">
+                                                    <h4 class="group inner list-group-item-heading">
+                                                        Potato</h4>
+                                                    <p class="group inner list-group-item-text">
+                                                        Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                                                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                                    <div class="row-fluid">
+                                                        <div class="pull-left col-lg-10">
+                                                            <p class="lead quantity pull-left">
+                                                                <b><small>50kg</small></b></p>
+                                                            <p class="price pull-right" style="color:#468847">Posted on:&nbsp;<span>15/01/2017</span></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab3" class="tab-pane">
+                                <div class="container bids">
+                                    <div class="well well-sm hide">
+                                        <strong>Category Title</strong>
+                                        <div class="btn-group">
+                                            <a href="#" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-list">
+                                                </span>List</a> <a href="#" id="grid" class="btn btn-default btn-sm"><span
+                                                    class="glyphicon glyphicon-th"></span>Grid</a>
+                                        </div>
+                                    </div>
+                                    <div id="products" class=" list-group">
+                                        <div class="item  col-xs-3 col-lg-3">
+                                            <div class="thumbnail">
+                                                <img class="group list-group-image" src="img/tomato.jpg" alt="" />
+                                                <div class="caption">
+                                                    <h4 class="group inner list-group-item-heading">
+                                                        Tomato</h4>
+                                                    <p class="group inner list-group-item-text">
+                                                        Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                                                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                                    <div class="row-fluid">
+                                                        <div class="pull-left col-lg-6">
+                                                            <p class="lead quantity pull-left">
+                                                                <b><small>50kg</small></b></p>
+                                                            <p class="lead price pull-right" style="color:#468847"><small><img src="img/rupees.png" alt="" style="height: 12px;">&nbsp;6700<span>.00</span></small></p></div>
+                                                        <div class="pull-right badge-large badge-success badge" style="font-size: 14px;
+                                                             padding: 13px;
+                                                             border-radius: 24px;
+                                                             "><i class="icon-ok"></i>&nbsp;Accepted</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item  col-xs-3 col-lg-3">
+                                            <div class="thumbnail">
+                                                <img class="group list-group-image" src="img/capsicum.jpg" alt="" />
+                                                <div class="caption">
+                                                    <h4 class="group inner list-group-item-heading">
+                                                        Capsicum</h4>
+                                                    <p class="group inner list-group-item-text">
+                                                        Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                                                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                                    <div class="row-fluid">
+                                                        <div class="pull-left col-lg-6">
+                                                            <p class="lead quantity pull-left">
+                                                                <b><small>50kg</small></b></p>
+                                                            <p class="lead price pull-right" style="color:#468847"><small><img src="img/rupees.png" alt="" style="height: 12px;">&nbsp;4500<span>.00</span></small></p>
+                                                        </div>
+                                                        <div class="pull-right badge-large badge-success badge" style="font-size: 14px;
+                                                             padding: 13px;
+                                                             border-radius: 24px;
+                                                             "><i class="icon-ok"></i>&nbsp;Accepted
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab4" class="tab-pane">
+                                <div class="container bids">
+                                    <div class="well well-sm hide">
+                                        <strong>Category Title</strong>
+                                        <div class="btn-group">
+                                            <a href="#" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-list">
+                                                </span>List</a> <a href="#" id="grid" class="btn btn-default btn-sm"><span
+                                                    class="glyphicon glyphicon-th"></span>Grid</a>
+                                        </div>
+                                    </div>
+                                    <div id="products" class=" list-group">
+                                        <div class="item  col-xs-3 col-lg-3">
+                                            <div class="thumbnail">
+                                                <img class="group list-group-image" src="img/carrot.jpg" alt="" />
+                                                <div class="caption">
+                                                    <h4 class="group inner list-group-item-heading">
+                                                        Carrot</h4>
+                                                    <p class="group inner list-group-item-text">
+                                                        Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                                                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                                    <div class="row-fluid">
+                                                        <div class="pull-left col-lg-6">
+                                                            <p class="lead quantity pull-left">
+                                                                <b><small>80kg</small></b></p>
+                                                            <p class="lead price pull-right" style="color:#468847"><small><img src="img/rupees.png" alt="" style="height: 12px;">&nbsp;5500<span>.00</span></small></p></div>
+                                                        <i class="icon-user tip-bottom" data-original-title="Contact Details: Srihari,7760138887" style="
+                                                           font-size: 23px;
+                                                           margin-left: 20%;
+                                                           color: Orange;
+                                                           font-size: 35px;
+                                                           "></i>
+                                                        <div class="pull-right badge-large badge-success badge" style="font-size: 14px;
+                                                             padding: 13px;
+                                                             border-radius: 24px;
+                                                             ">&nbsp;Accepted</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="myAlert" class="modal">
+                        <div class="modal-header">
+                            <button data-dismiss="modal" class="close" type="button">×</button>
+                            <h3>Place bid</h3>
+                        </div>
+                        <div class="modal-body  row-fluid">
+                            <div class="nopadding">
+                                <form action="#" method="get" class="form-horizontal">
+                                    <div class="control-group">
+                                        <label class="control-label">Product Name :</label>
+                                        <div class="controls">
+                                            <input type="text" class="span11"  />
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">Quantity :</label>
+                                        <div class="controls">
+                                            <input type="text" class="span11"  />
+                                        </div>
+                                    </div>
+                                    <!--   <div class="control-group">
+                                        <label class="control-label">Harvest Date :</label>
+                                        <div class="controls">
+                                          <input type="date" class="span11"  />
+                                        </div>
+                                      </div> -->
+                                    <div class="control-group">
+                                        <label class="control-label">End Date</label>
+                                        <div class="controls">
+                                            <input type="date" class="span11"  />
+                                        </div>
+                                    </div>
+                                    <!--    <div class="control-group">
+                                         <label class="control-label">Location :</label>
+                                         <div class="controls">
+                                           <input type="text" class="span11"  />
+                                         </div>
+                                       </div> -->
+
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer"> <a data-dismiss="modal" class="btn btn-primary" href="#">Confirm</a> <a data-dismiss="modal" class="btn" href="#">Cancel</a> </div>
+                    </div>
+
+                </div>
+            </div>
+            <div id="myAlert" class="modal">
+              <div class="modal-header">
+                <button data-dismiss="modal" class="close" type="button">×</button>
+                <h3>Add Post</h3>
+              </div>
+              <div class="modal-body  row-fluid">
+                <div class="nopadding">
+                  <form action="#" method="get" class="form-horizontal">
+                    <div class="control-group">
+                        <label class="control-label">Product Name :</label>
+                        <div class="controls">
+                            <input type="text" class="span11"  />
+                        </div>
+                    </div>
+                    <div class="control-group">
+                      <label class="control-label">Quantity :</label>
+                      <div class="controls">
+                        <input type="text" class="span11"  />
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <label class="control-label">Harvest Date :</label>
+                      <div class="controls">
+                        <input type="date" class="span11"  />
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <label class="control-label">Expected Price :</label>
+                      <div class="controls">
+                        <input type="number" class="span11"  />
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <label class="control-label">Location :</label>
+                      <div class="controls">
+                        <input type="text" class="span11"  />
+                      </div>
+                    </div>
+                    
+                  </form>
+                </div>
+              </div>
+              <div class="modal-footer"> <a data-dismiss="modal" class="btn btn-primary" href="#">Confirm</a> <a data-dismiss="modal" class="btn" href="#">Cancel</a> </div>
+            </div>
+
+        </div>
+
+        <!--end-main-container-part-->
+
+
+
+        <!--end-Footer-part-->
+
+        <script src="js/excanvas.min.js"></script> 
+        <script src="js/jquery.min.js"></script> 
+        <script src="js/jquery.ui.custom.js"></script> 
+        <script src="js/bootstrap.min.js"></script> 
+        <script src="js/jquery.flot.min.js"></script> 
+        <script src="js/jquery.flot.resize.min.js"></script> 
+        <script src="js/jquery.peity.min.js"></script> 
+        <script src="js/fullcalendar.min.js"></script> 
+        <script src="js/matrix.js"></script> 
+        <script src="js/matrix.dashboard.js"></script> 
+        <script src="js/jquery.gritter.min.js"></script> 
+        <script src="js/matrix.interface.js"></script> 
+        <script src="js/matrix.chat.js"></script> 
+        <script src="js/jquery.validate.js"></script> 
+        <script src="js/matrix.form_validation.js"></script> 
+        <script src="js/jquery.wizard.js"></script> 
+        <script src="js/jquery.uniform.js"></script> 
+        <script src="js/select2.min.js"></script> 
+        <script src="js/matrix.popover.js"></script> 
+        <script src="js/jquery.dataTables.min.js"></script> 
+        <script src="js/matrix.tables.js"></script> 
+
+        <script type="text/javascript">
+    
+	        // $.gritter.add({
+	        //     title:  'Important Unread Notifications',
+	        //     text:   'You have 5 unread Notifications.',
+	        //     image:  'img/demo/envelope.png',
+	        //     sticky: false
+	        // });
+        	$(".js-example-basic-multiple").select2();
+            // This function is called from the pop-up menus to transfer to
+            // a different page. Ignore if the value returned is a null string:
+            function goPage(newURL) {
+
+                // if url is empty, skip the menu dividers and reset the menu selection to default
+                if (newURL != "") {
+
+                    // if url is "-", it is this page -- reset the menu:
+                    if (newURL == "-") {
+                        resetMenu();
+                    }
+                    // else, send page to designated URL            
+                    else {
+                        document.location.href = newURL;
+                    }
+                }
+            }
+
+            // resets the menu selection upon entry to this page:
+            function resetMenu() {
+                document.gomenu.selector.selectedIndex = 2;
+            }
+        </script>
+    </body>
+</html>

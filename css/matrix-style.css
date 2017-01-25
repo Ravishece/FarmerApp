@@ -1704,3 +1704,9 @@ div.dataTables_wrapper .ui-widget-header {
 .item.list-group-item {
 	background-color: #EEE;
 }
+body {
+	top : 0 !important;
+}
+.goog-te-banner-frame {
+	display: none !important;
+}

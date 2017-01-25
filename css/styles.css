@@ -1,0 +1,27 @@
+@media (min-width: 1200px){
+	.container{
+		width: 100%;
+	}
+}
+
+@media (max-width: 480px){
+	#header{
+		display: inline-block;
+	}
+	
+	#user-nav {
+		margin: 0;
+		width: 110px;
+		height: 32px;
+		left: 200px;
+		top: -60px;
+	}
+	
+	#user-nav > ul{
+		width: 110px;
+		margin: 0 !important;
+		display: inline-block;
+		right: 0 !important;
+		float: right;
+	}
+}

@@ -88,4 +88,14 @@
 		float: right;
 	}
 	
+	.nav-tabs>li{
+		clear: both;
+		width: 100%;
+		border-bottom: solid 1px #616175;
+	}
+	
+	.widget-title .nav-tabs li a{		
+		background: #616175;
+		border-width: 0px;
+	}
 }

@@ -9,6 +9,39 @@
 	width: 75%;
 }
 
+.row-fluid .span11.bid-list{
+	margin-top: 1%;
+	font-size: 13px;
+	color: black;
+	width: 100%;
+}
+
+.bid-list input[type="checkbox"]{
+	margin: 0 4px 0 0;
+}
+
+.bid-list .widget-content{
+	padding: 0;
+}
+
+.price-section span{
+	float: right;
+}
+
+.row-fluid .span6.qty-price-section{
+	width: 50%;
+}
+
+.posted-section{
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.qty-section{
+	padding: 0;
+	width: auto;
+}
+
 @media (min-width: 1200px){
 	.container{
 		width: 100%;
@@ -25,6 +58,10 @@
 	.filter-container{
 		width: 50%;
 	}
+	[class*="span"], .row-fluid [class*="span"] {
+		float: left;
+		width: 31.49%; 
+	}
 }
 
 @media (max-width: 767px){
@@ -32,6 +69,11 @@
 		width: 100%;
 	}
 	
+	
+	.price-section span{
+		float: left;
+	}
+
 	.item
 	{
 		float: none;

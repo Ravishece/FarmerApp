@@ -17,8 +17,8 @@
       Ravi
   </author>
   
-  <!-- <content src="login.html" /> -->
-  <content src="http://10.117.147.32:8080/farmerconnect/index.html" />
+  <content src="login.html" />
+  <!-- <content src="http://10.117.147.32:8080/farmerconnect/index.html" /> -->
   <icon src="img/farmer.png" />
     
   <access origin="*" />

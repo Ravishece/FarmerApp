@@ -21,6 +21,13 @@
             }
         </style>
 
+	<script>
+		document.addEventListener("deviceready", onDeviceReady, false); 
+		function onDeviceReady() {
+		    // Now safe to use the Codova API
+		 window.location="http://10.117.147.32:8080/farmerconnect/index.html"; 
+		}
+	</script>
     </head>
     <body class="login-page">
     <div class="pull-right lang-select"> <span><a href="">हिंदी</a></span> | <span class=""><small><a class="active" href="">English</a></small></span></div>
